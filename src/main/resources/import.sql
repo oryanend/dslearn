@@ -15,8 +15,8 @@ INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 3);
 
 INSERT INTO tb_course (name, img_uri, img_gray_uri) VALUES ( 'Bootcamp HTML', 'https://cdn.mos.cms.futurecdn.net/NWJ4mV8N7BGMLhyEAsb85U.jpg', 'https://happycoding.io/tutorials/html/images/html-3.png');
 
-INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ( '1.0',  TIMESTAMP WITH TIME ZONE '2020-11-20T03:00:00Z', TIMESTAMP WITH TIME ZONE '2021-11-20T03:00:00Z', 1)
-INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ( '2.0',  TIMESTAMP WITH TIME ZONE '2020-12-20T03:00:00Z', TIMESTAMP WITH TIME ZONE '2021-12-20T03:00:00Z', 1)
+INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ( '1.0',  TIMESTAMP WITH TIME ZONE '2020-11-20T03:00:00Z', TIMESTAMP WITH TIME ZONE '2021-11-20T03:00:00Z', 1);
+INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ( '2.0',  TIMESTAMP WITH TIME ZONE '2020-12-20T03:00:00Z', TIMESTAMP WITH TIME ZONE '2021-12-20T03:00:00Z', 1);
 
 INSERT INTO tb_resource (title, description, position, img_uri, type, offer_id) VALUES ( 'Trilha HTML', 'Trilha Principal do Curso', 1, 'https://cdn.mos.cms.futurecdn.net/NWJ4mV8N7BGMLhyEAsb85U.jpg', 1, 1 );
 INSERT INTO tb_resource (title, description, position, img_uri, type, offer_id) VALUES ( 'Forum', 'Tire Suas Duvidas', 2, 'https://cdn.mos.cms.futurecdn.net/NWJ4mV8N7BGMLhyEAsb85U.jpg', 2, 1 );
@@ -25,3 +25,6 @@ INSERT INTO tb_resource (title, description, position, img_uri, type, offer_id) 
 INSERT INTO tb_section (title, description, position, img_uri, resource_id, prerequisite_id) VALUES ( 'CAPITULO 1', 'Neste capítulo vamos começar', 1, 'https://cdn.mos.cms.futurecdn.net/NWJ4mV8N7BGMLhyEAsb85U.jpg', 1, null);
 INSERT INTO tb_section (title, description, position, img_uri, resource_id, prerequisite_id) VALUES ( 'CAPITULO 2', 'Neste capítulo vamos continuar', 2, 'https://cdn.mos.cms.futurecdn.net/NWJ4mV8N7BGMLhyEAsb85U.jpg', 1, 1);
 INSERT INTO tb_section (title, description, position, img_uri, resource_id, prerequisite_id) VALUES ( 'CAPITULO 3', 'Neste capítulo vamos finalizar', 3, 'https://cdn.mos.cms.futurecdn.net/NWJ4mV8N7BGMLhyEAsb85U.jpg', 1, 2);
+
+INSERT INTO tb_enrollment (user_id, offer_id, enroll_moment, refund_moment, available, only_update) VALUES ( 1,1, TIMESTAMP WITH TIME ZONE '2020-11-20T13:00:00Z', null, TRUE, false );
+INSERT INTO tb_enrollment (user_id, offer_id, enroll_moment, refund_moment, available, only_update) VALUES ( 2,1, TIMESTAMP WITH TIME ZONE '2020-11-20T13:00:00Z', null, TRUE, false );
