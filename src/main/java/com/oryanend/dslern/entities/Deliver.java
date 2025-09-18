@@ -18,6 +18,7 @@ public class Deliver {
     private Instant moment;
     private DeliverStatus status;
     private String feedback;
+    private Integer correctCount;
 
     @ManyToOne
     @JoinColumns({
@@ -33,7 +34,7 @@ public class Deliver {
     public Deliver() {
     }
 
-    public Deliver(Long id, String uri, Instant moment, DeliverStatus status, String feedback, Enrollment enrollment, Lesson lesson) {
+    public Deliver(Long id, String uri, Instant moment, DeliverStatus status, String feedback, Enrollment enrollment, Lesson lesson, Integer correctCount) {
         this.id = id;
         this.uri = uri;
         this.moment = moment;
@@ -41,6 +42,7 @@ public class Deliver {
         this.feedback = feedback;
         this.enrollment = enrollment;
         this.lesson = lesson;
+        this.correctCount = correctCount;
     }
 
     public Long getId() {
@@ -85,6 +87,14 @@ public class Deliver {
 
     public Enrollment getEnrollment() {
         return enrollment;
+    }
+
+    public Integer getCorrectCount() {
+        return correctCount;
+    }
+
+    public void setCorrectCount(Integer correctCount) {
+        this.correctCount = correctCount;
     }
 
     public void setEnrollment(Enrollment enrollment) {

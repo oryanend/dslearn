@@ -12,7 +12,7 @@ public class Notification {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String title;
+    private String text;
     @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Instant moment;
     private boolean read;
@@ -25,9 +25,9 @@ public class Notification {
     public Notification() {
     }
 
-    public Notification(Long id, String title, Instant moment, boolean read, String route, User user) {
+    public Notification(Long id, String text, Instant moment, boolean read, String route, User user) {
         this.id = id;
-        this.title = title;
+        this.text = text;
         this.moment = moment;
         this.read = read;
         this.route = route;
@@ -42,12 +42,12 @@ public class Notification {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getText() {
+        return text;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setText(String text) {
+        this.text = text;
     }
 
     public Instant getMoment() {
