@@ -21,3 +21,7 @@ INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ( '2.
 INSERT INTO tb_resource (title, description, position, img_uri, type, offer_id) VALUES ( 'Trilha HTML', 'Trilha Principal do Curso', 1, 'https://cdn.mos.cms.futurecdn.net/NWJ4mV8N7BGMLhyEAsb85U.jpg', 1, 1 );
 INSERT INTO tb_resource (title, description, position, img_uri, type, offer_id) VALUES ( 'Forum', 'Tire Suas Duvidas', 2, 'https://cdn.mos.cms.futurecdn.net/NWJ4mV8N7BGMLhyEAsb85U.jpg', 2, 1 );
 INSERT INTO tb_resource (title, description, position, img_uri, type, offer_id) VALUES ( 'Lives', 'Lives Exclusivas da Turma', 3, 'https://cdn.mos.cms.futurecdn.net/NWJ4mV8N7BGMLhyEAsb85U.jpg', 0, 1 );
+
+INSERT INTO tb_section (title, description, position, img_uri, resource_id, prerequisite_id) VALUES ( 'CAPITULO 1', 'Neste capítulo vamos começar', 1, 'https://cdn.mos.cms.futurecdn.net/NWJ4mV8N7BGMLhyEAsb85U.jpg', 1, null);
+INSERT INTO tb_section (title, description, position, img_uri, resource_id, prerequisite_id) VALUES ( 'CAPITULO 2', 'Neste capítulo vamos continuar', 2, 'https://cdn.mos.cms.futurecdn.net/NWJ4mV8N7BGMLhyEAsb85U.jpg', 1, 1);
+INSERT INTO tb_section (title, description, position, img_uri, resource_id, prerequisite_id) VALUES ( 'CAPITULO 3', 'Neste capítulo vamos finalizar', 3, 'https://cdn.mos.cms.futurecdn.net/NWJ4mV8N7BGMLhyEAsb85U.jpg', 1, 2);
